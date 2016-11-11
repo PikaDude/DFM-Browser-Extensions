@@ -1,7 +1,7 @@
 <html>
 <body style="min-width:300px;">
-    <script src="stuffs.js"></script>
     <h1>Discord.FM Queue</h1>
+    <script src="stuffs.js"></script>
     <select id="sweg" onchange="bidoof()">
         <option id="electro-hub">Electro Hub</option>
         <option id="chill-corner">Chill Corner</option>
@@ -14,16 +14,15 @@
         <option id="coffee-house-jazz">Coffee House Jazz</option>
     </select>
     <img src="dfmlogo.png" style="position: fixed; right: 0px; top: 0px; width: 70px; padding: 0px 10px" />
-    <p>
-        <b>Now Playing: </b>
-        <span id="song"></span>
-    </p>
-    <p>
-        <b>Queue:</b>
+    <div id="stuff">
         <br />
-        <span id="queue"></span>
-    </p>
+    </div>
+    <div style="text-align: center;" id="theySeeMeLoading">
+        <img src="loading.gif" style="width: 100px;" />
+        <br />
+        <br />
+    </div>
     <br />
-    <p style="position: fixed; right: 0px; bottom: 0px" id="version">Checking for updates...</p>
+    <p style="position: fixed; right: 0px; bottom: 0px; padding: 0px 13px" id="version">Checking for updates...</p>
 </body>
 </html>

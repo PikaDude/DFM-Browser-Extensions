@@ -1,3 +1,7 @@
+#1.2
+-Fixed version position.
+-Added loading screen.
+
 #1.1
 -Fixed small bug.
 

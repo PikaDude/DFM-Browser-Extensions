@@ -1,6 +1,6 @@
 window.onload = function () {
     var libId = "";
-    var version = "1.1";
+    var version = "1.2";
     chrome.storage.local.get('libId', function (result) {
         libId = result.libId;
         if (libId == null) libId = "electro-hub";
@@ -9,6 +9,8 @@ window.onload = function () {
         checkforupdates();
     });
     document.getElementById('sweg').onchange = function () {
+        document.getElementById('stuff').innerHTML = "";
+        document.getElementById('theySeeMeLoading').innerHTML = '<img src="loading.gif" style="width: 100px;" /><br /><br />';
         var aaa = document.getElementById("sweg");
         var no = aaa.options[aaa.selectedIndex].id;
         chrome.storage.local.set({ 'libId': no });
@@ -16,8 +18,11 @@ window.onload = function () {
     }
     function potato(libId) {
         var request = new XMLHttpRequest();
+        console.log("bbb");
         request.open('GET', 'https://temp.discord.fm/libraries/' + libId + '/queue', true);
         request.onload = function () {
+            document.getElementById('stuff').innerHTML = '<p><b>Now Playing: </b><span id="song"></span></p><p><b>Queue:</b><br /><span id="queue"></span></p>';
+            document.getElementById('theySeeMeLoading').innerHTML = "";
             var data = JSON.parse(request.responseText);
             document.getElementById(data.bot).selected = 'selected';
             document.getElementById('song').textContent = data.current.title;
@@ -26,6 +31,7 @@ window.onload = function () {
             while (poop !== data.queue.length) {
                 document.getElementById('queue').innerHTML = document.getElementById('queue').innerHTML + "<br />" + (poop + 1) + ": " + data.queue[poop].title;
                 poop++;
+                console.log("aaa");
             }
         }
         request.send();
