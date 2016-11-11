@@ -1,0 +1,14 @@
+{
+  "author": "PikaDude",
+  "browser_action": {
+    "default_icon": "dfmlogo.png",
+    "default_popup": "popup.html"
+  },
+  "description": "This extension shows the song queue for a channel of your choice. Made by PikaDude.",
+  "homepage_url": "http://github.com/PikaDude/DFM-Browser-Extensions",
+  "icons": { "128": "dfmlogo.png" },
+  "manifest_version": 2,
+  "name": "Discord.FM Queue List",
+  "permissions": [ "activeTab", "storage" ],
+  "version": "1.0"
+}
