@@ -11,5 +11,4 @@ Typically for the people who are just too lazy to open Discord and type "!queue"
 At the moment it just works with Google Chrome. Working on Firefox now...
 
 # Screenshots
-
 ![DFM-Browser-Extensions](https://github.com/PikaDude/DFM-Browser-Extensions/blob/master/Screenshots/chrome.png?raw=true "Chrome")
