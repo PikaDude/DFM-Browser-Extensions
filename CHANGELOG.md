@@ -1,3 +1,7 @@
+#1.2.1
+-Updated description.
+-Now sort of available for Firefox. (Not Really)
+
 #1.2
 -Fixed version position.
 -Added loading screen.

@@ -1,4 +1,4 @@
-# DFM Browser Extension - Chrome Edition (1.2)
+# DFM Browser Extension - Chrome Edition (1.2.1)
 It's for Google Chrome.
 
 # How do I install it?
