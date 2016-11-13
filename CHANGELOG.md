@@ -1,3 +1,6 @@
+#1.2.2 (Firefox Only)
+-Fixed major error.
+
 #1.2.1
 -Updated description.
 -Now sort of available for Firefox. (Not Really)

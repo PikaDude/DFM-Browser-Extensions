@@ -1,12 +1,10 @@
 window.onload = function () {
     var libId = "";
-    var version = "1.2.1";
     chrome.storage.local.get('libId', function (result) {
         libId = result.libId;
         if (libId == null) libId = "electro-hub";
         potato(libId);
         websocketthing();
-        checkforupdates();
     });
     document.getElementById('sweg').onchange = function () {
         document.getElementById('stuff').innerHTML = "";
@@ -44,26 +42,5 @@ window.onload = function () {
                 window.setTimeout(potato, 1000, libId);
             }
         }
-    }
-    function checkforupdates() {
-        var memes = new XMLHttpRequest();
-        memes.open('GET', 'https://raw.githubusercontent.com/PikaDude/DFM-Browser-Extensions/master/Firefox/version.txt');
-        memes.onload = function () {
-            if (memes.status >= 200 && memes.status < 400) {
-                if (version == memes.responseText) {
-                    document.getElementById('version').textContent = "Latest Version Installed (" + version + ")";
-                }
-                else {
-                    document.getElementById('version').textContent = "New Version Available: " + memes.responseText;
-                }
-            }
-            else {
-                document.getElementById('version').textContent = "Failed to check for updates";
-            }
-        }
-        memes.onerror = function () {
-            document.getElementById('version').textContent = "Failed to check for updates";
-        }
-        memes.send();
     }
 };

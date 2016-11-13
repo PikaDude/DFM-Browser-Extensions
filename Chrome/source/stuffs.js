@@ -18,7 +18,6 @@ window.onload = function () {
     }
     function potato(libId) {
         var request = new XMLHttpRequest();
-        console.log("bbb");
         request.open('GET', 'https://temp.discord.fm/libraries/' + libId + '/queue', true);
         request.onload = function () {
             document.getElementById('stuff').innerHTML = '<p><b>Now Playing: </b><span id="song"></span></p><p><b>Queue:</b><br /><span id="queue"></span></p>';
@@ -31,7 +30,6 @@ window.onload = function () {
             while (poop !== data.queue.length) {
                 document.getElementById('queue').innerHTML = document.getElementById('queue').innerHTML + "<br />" + (poop + 1) + ": " + data.queue[poop].title;
                 poop++;
-                console.log("aaa");
             }
         }
         request.send();

@@ -1,4 +1,4 @@
-# Discord.FM Browser Extensions
+# Discord.FM Browser Extensions (1.2.1)
 Extensions for your browser which display the song queue for a channel of your choice.
 
 # Whats a Discord.FM?
@@ -8,7 +8,8 @@ Discord.FM is a Discord server with bots that constantly stream music of your ch
 Typically for the people who are just too lazy to open Discord and type "!queue" in the channel. Or if you just can't for some weird reason, then that works too... *coughs*
 
 # Supported Browsers?
-At the moment it just works with Google Chrome. Working on Firefox now...
+Chrome - 1.2.1 (Latest)
+Firefox - 1.2.2 (Firefox Only)
 
 # Screenshots
 ![DFM-Browser-Extensions](https://github.com/PikaDude/DFM-Browser-Extensions/blob/master/Screenshots/chrome.png?raw=true "Chrome")
