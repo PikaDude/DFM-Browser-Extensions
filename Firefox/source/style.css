@@ -1,0 +1,41 @@
+body {
+    min-width: 300px;
+    min-height: 430px;
+}
+
+.logo {
+    position: fixed;
+    right: 0px;
+    top: 0px;
+    width: 70px;
+    padding: 0px 10px;
+}
+
+#theySeeMeLoading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 0);
+}
+
+.loading {
+    width: 100px;
+}
+
+#version {
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    padding: 0px 13px;
+}
+
+.title {
+    font-family: Segoe UI;
+    padding: 5px 0px;
+    font-size: 25px;
+}
+
+#stuff {
+    font-family: Segoe UI;
+    font-size: 12px;
+}

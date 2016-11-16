@@ -1,31 +1,14 @@
 {
-
-  "manifest_version": 2,
-  "name": "Discord.FM Queue List",
-  "version": "1.2.1",
-
-  "description": "Shows the song queue for a Discord.FM library of your choice. Made by PikaDude.",
-  "homepage_url": "http://github.com/PikaDude/DFM-Browser-Extensions",
-  "icons": {
-    "128": "dfmlogo.png"
-  },
-
-  "permissions": [
-    "activeTab",
-    "storage"
-  ],
-
+  "author": "PikaDude",
   "browser_action": {
     "default_icon": "dfmlogo.png",
-    "default_title": "Discord.FM Queue List",
     "default_popup": "popup.html"
   },
-
-  "web_accessible_resources": [
-    "loading.gif",
-    "dfmlogo.png",
-    "stuffs.js",
-    "popup.html"
-  ]
-
+  "description": "Shows the song queue for a Discord.FM library of your choice. Made by PikaDude.",
+  "homepage_url": "http://github.com/PikaDude/DFM-Browser-Extensions",
+  "icons": { "128": "dfmlogo.png" },
+  "manifest_version": 2,
+  "name": "Discord.FM Queue List",
+  "permissions": [ "activeTab", "storage" ],
+  "version": "1.3"
 }
