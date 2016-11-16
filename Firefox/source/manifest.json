@@ -2,7 +2,7 @@
 
   "manifest_version": 2,
   "name": "Discord.FM Queue List",
-  "version": "1.2.2",
+  "version": "1.3",
 
   "description": "Shows the song queue for a Discord.FM library of your choice. Made by PikaDude.",
   "homepage_url": "http://github.com/PikaDude/DFM-Browser-Extensions",
@@ -24,7 +24,8 @@
   "web_accessible_resources": [
     "loading.gif",
     "dfmlogo.png",
-    "stuffs.js",
+    "main.js",
+    "style.css",
     "popup.html"
   ]
 

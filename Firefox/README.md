@@ -1,4 +1,4 @@
-# DFM Browser Extension - Firefox Edition (1.2.2-Firefox)
+# DFM Browser Extension - Firefox Edition (1.3)
 A simple extension for Mozilla Firefox that displays the queue for a Discord.FM library of your choice!
 
 # How do I install it?

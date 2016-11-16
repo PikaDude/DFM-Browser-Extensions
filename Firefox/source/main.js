@@ -1,5 +1,6 @@
 window.onload = function () {
     var libId = "";
+    var version = "1.3";
     chrome.storage.local.get('libId', function (result) {
         libId = result.libId;
         if (libId == null) libId = "electro-hub";
@@ -7,28 +8,28 @@ window.onload = function () {
         websocketthing();
     });
     document.getElementById('sweg').onchange = function () {
-        document.getElementById('stuff').innerHTML = "";
-        document.getElementById('theySeeMeLoading').innerHTML = '<img src="loading.gif" style="width: 100px;" /><br /><br />';
+        document.getElementById('theySeeMeLoading').style.visibility = 'visible';
+        document.getElementById('stuff').style.visibility = 'hidden';
         var aaa = document.getElementById("sweg");
         var no = aaa.options[aaa.selectedIndex].id;
         chrome.storage.local.set({ 'libId': no });
         potato(no);
     }
     function potato(libId) {
+        document.getElementById('stuff').style.visibility = 'hidden';
         var request = new XMLHttpRequest();
         request.open('GET', 'https://temp.discord.fm/libraries/' + libId + '/queue', true);
         request.onload = function () {
-            document.getElementById('stuff').innerHTML = '<p><b>Now Playing: </b><span id="song"></span></p><p><b>Queue:</b><br /><span id="queue"></span></p>';
-            document.getElementById('theySeeMeLoading').innerHTML = "";
             var data = JSON.parse(request.responseText);
             document.getElementById(data.bot).selected = 'selected';
             document.getElementById('song').textContent = data.current.title;
-            var poop = 1;
-            document.getElementById('queue').innerHTML = "1: " + data.queue[0].title;
+            var poop = 0;
             while (poop !== data.queue.length) {
-                document.getElementById('queue').innerHTML = document.getElementById('queue').innerHTML + "<br />" + (poop + 1) + ": " + data.queue[poop].title;
+                document.getElementById('queue' + (poop + 1)).textContent = (poop + 1) + ": " + data.queue[poop].title;
                 poop++;
             }
+            document.getElementById('theySeeMeLoading').style.visibility = 'hidden';
+            document.getElementById('stuff').style.visibility = 'visible';
         }
         request.send();
     }

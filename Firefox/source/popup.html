@@ -1,7 +1,11 @@
-<html>
-<body style="min-width:300px; min-height: 430px">
-    <h1 style="font-family: Segoe UI; padding: 5px 0px; font-size: 25px">Discord.FM Queue</h1>
-    <script src="stuffs.js"></script>
+﻿<html>
+<head>
+    <meta charset="utf-8" />
+    <script src="main.js"></script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <h1 class="title">Discord.FM Queue</h1>
     <select id="sweg" onchange="bidoof()">
         <option id="electro-hub">Electro Hub</option>
         <option id="chill-corner">Chill Corner</option>
@@ -13,12 +17,36 @@
         <option id="rock-n-roll">Rock n Roll</option>
         <option id="coffee-house-jazz">Coffee House Jazz</option>
     </select>
-    <img src="dfmlogo.png" style="position: fixed; right: 0px; top: 0px; width: 70px; padding: 0px 10px" />
-    <div id="stuff" style="font-size: 12px; font-family: Segoe UI;">
-        <br />
+    <img src="dfmlogo.png" class="logo" />
+    <div id="stuff">
+        <p>
+            <b>Now Playing: </b>
+            <span id="song"></span>
+        </p>
+        <p>
+            <b>Queue:</b>
+            <br />
+            <span id="queue1"></span>
+            <br />
+            <span id="queue2"></span>
+            <br />
+            <span id="queue3"></span>
+            <br />
+            <span id="queue4"></span>
+            <br />
+            <span id="queue5"></span>
+            <br />
+            <span id="queue6"></span>
+            <br />
+            <span id="queue7"></span>
+            <br />
+            <span id="queue8"></span>
+            <br />
+            <span id="queue9"></span>
+        </p>
     </div>
-    <div style="text-align: center;" id="theySeeMeLoading">
-        <img src="loading.gif" style="width: 100px;" />
+    <div id="theySeeMeLoading">
+        <img src="loading.gif" class="loading"/>
         <br />
         <br />
     </div>
